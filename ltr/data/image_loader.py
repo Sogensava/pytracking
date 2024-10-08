@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/home/atila/aliberk_ws/vot_ws/trackers/paper_imp/pytracking')
+sys.path.append('/home/vot_ws/pytracking')
 import jpeg4py
 import cv2 as cv
 from PIL import Image
