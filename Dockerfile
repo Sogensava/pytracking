@@ -158,3 +158,7 @@ RUN cd ./pytracking
 WORKDIR /home/vot_ws/pytracking
 
 COPY ./trackers.ini /home/vot_ws/trackers.ini
+
+WORKDIR /home/vot_ws/pytracking
+RUN cd /home/vot_ws/pytracking
+RUN bash install.sh
