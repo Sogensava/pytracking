@@ -140,7 +140,8 @@ RUN pip install PyYAML && \
     pip install timm && \
     pip install class_registry && \
     pip install shapely && \
-    pip install gdown
+    pip install gdown && \
+    pip install pytracking
 # conda env installation
 # RUN conda install --file ./docker_requirements.txt
 
