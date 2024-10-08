@@ -2,7 +2,7 @@ import math
 import torch.nn as nn
 from collections import OrderedDict
 import torch.utils.model_zoo as model_zoo
-from torchvision.models.resnet import model_urls
+from torchvision.models.resnet import ResNet50_Weights #ResNet50_Weights  #model_urls
 from .base import Backbone
 
 

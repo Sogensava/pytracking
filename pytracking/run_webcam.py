@@ -1,4 +1,7 @@
 import os
+#os.environ['CUDA_HOME']="/home/atila/anaconda3/envs/pytracking_two"
+#os.environ['CUDA_HOME']="/home/atila/usr/lib/cuda"
+#os.environ['CUDA_HOME']="/home/atila/usr"
 import sys
 import argparse
 
