@@ -91,7 +91,7 @@ echo ""
 echo ""
 echo "****************** DiMP50 Network ******************"
 gdown https://drive.google.com/uc\?id\=1qgachgqks2UGjKx-GdO1qylBDdB1f9KN -O pytracking/networks/dimp50.pth
-# gdown https://drive.google.com/uc\?id\=1MAjrRJDCbL0DSjUKFyDkUuYS1-cYBNjk -O pytracking/networks/dimp18.pth
+gdown https://drive.google.com/uc\?id\=1MAjrRJDCbL0DSjUKFyDkUuYS1-cYBNjk -O pytracking/networks/dimp18.pth
 
 # echo ""
 # echo ""
@@ -113,20 +113,20 @@ python -c "from ltr.admin.environment import create_default_local_file; create_d
 echo ""
 echo ""
 echo "****************** Installing jpeg4py ******************"
-while true; do
-    read -p "Install jpeg4py for reading images? This step required sudo privilege. Installing jpeg4py is optional, however recommended. [y,n]  " install_flag
-    case $install_flag in
-        [Yy]* ) sudo apt-get install libturbojpeg; break;;
-        [Nn]* ) echo "Skipping jpeg4py installation!"; break;;
-        * ) echo "Please answer y or n  ";;
-    esac
-done
+# while true; do
+#     read -p "Install jpeg4py for reading images? This step required sudo privilege. Installing jpeg4py is optional, however recommended. [y,n]  " install_flag
+#     case $install_flag in
+#         [Yy]* ) sudo apt-get install libturbojpeg; break;;
+#         [Nn]* ) echo "Skipping jpeg4py installation!"; break;;
+#         * ) echo "Please answer y or n  ";;
+#     esac
+# done
 
-echo ""
-echo ""
+# echo ""
+# echo ""
 echo "****************** Installation complete! ******************"
 
-echo ""
-echo ""
-echo "****************** More networks can be downloaded from the google drive folder https://drive.google.com/drive/folders/1WVhJqvdu-_JG1U-V0IqfxTUa1SBPnL0O ******************"
-echo "****************** Or, visit the model zoo at https://github.com/visionml/pytracking/blob/master/MODEL_ZOO.md ******************"
+# echo ""
+# echo ""
+# echo "****************** More networks can be downloaded from the google drive folder https://drive.google.com/drive/folders/1WVhJqvdu-_JG1U-V0IqfxTUa1SBPnL0O ******************"
+# echo "****************** Or, visit the model zoo at https://github.com/visionml/pytracking/blob/master/MODEL_ZOO.md ******************"
