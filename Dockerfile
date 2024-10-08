@@ -161,4 +161,22 @@ COPY ./trackers.ini /home/vot_ws/trackers.ini
 
 WORKDIR /home/vot_ws/pytracking
 RUN cd /home/vot_ws/pytracking
-RUN bash install.sh
+
+RUN conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
+RUN conda install -y matplotlib
+RUN conda install -y pandas
+RUN conda install -y tqdm
+RUN pip install opencv-python
+RUN pip install tb-nightly
+RUN pip install visdom
+RUN pip install scikit-image
+RUN pip install tikzplotlib
+RUN pip install gdown
+RUN conda install -y cython
+RUN pip install pycocotools
+RUN pip install lvis
+RUN pip install spatial-correlation-sampler
+RUN pip install jpeg4py 
+RUN sudo apt-get install ninja-build
+RUN mkdir pytracking/networks
+RUN gdown https://drive.google.com/uc\?id\=1qgachgqks2UGjKx-GdO1qylBDdB1f9KN -O pytracking/networks/dimp50.pth
