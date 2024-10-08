@@ -186,4 +186,5 @@ RUN gdown https://drive.google.com/uc\?id\=1qgachgqks2UGjKx-GdO1qylBDdB1f9KN -O 
 
 RUN cd /home/vot_ws/pytracking && git submodule update
 
-
+RUN rm /home/vot_ws/pytracking/ltr/external/pytorch/prroi_pool/src/prroi_pooling_gpu.c
+RUN cp /home/vot_ws/pytracking/pytracking/external/prroi_pooling_gpu.c /home/vot_ws/pytracking/ltr/external/pytorch/prroi_pool/src/
