@@ -191,3 +191,6 @@ RUN git submodule update
 
 RUN rm /home/vot_ws/pytracking/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.c
 RUN cp /home/vot_ws/pytracking/pytracking/external/prroi_pooling_gpu.c /home/vot_ws/pytracking/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/
+
+RUN cd /home/vot_ws
+WORKDIR /home/vot_ws
