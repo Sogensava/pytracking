@@ -145,6 +145,9 @@ RUN pip install PyYAML && \
 # conda env installation
 # RUN conda install --file ./docker_requirements.txt
 
+RUN conda install pytorch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 pytorch-cuda=12.4 -c pytorch -c nvidia
+
+
 # create workspace 
 RUN mkdir /home/vot_ws
 
@@ -175,8 +178,12 @@ RUN pip install gdown
 RUN conda install -y cython
 RUN pip install pycocotools
 RUN pip install lvis
-RUN pip install spatial-correlation-sampler
+#RUN pip install spatial-correlation-sampler
 RUN pip install jpeg4py 
-RUN sudo apt-get install ninja-build
+#RUN sudo apt-get install ninja-build
 RUN mkdir pytracking/networks
 RUN gdown https://drive.google.com/uc\?id\=1qgachgqks2UGjKx-GdO1qylBDdB1f9KN -O pytracking/networks/dimp50.pth
+
+RUN cd /home/vot_ws/pytracking && git submodule update
+
+
