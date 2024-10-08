@@ -184,7 +184,10 @@ RUN pip install jpeg4py
 RUN mkdir pytracking/networks
 RUN gdown https://drive.google.com/uc\?id\=1qgachgqks2UGjKx-GdO1qylBDdB1f9KN -O pytracking/networks/dimp50.pth
 
-RUN cd /home/vot_ws/pytracking && git submodule update
+RUN cd /home/vot_ws/pytracking && git submodule init
+RUN python -c "from pytracking.evaluation.environment import create_default_local_file; create_default_local_file()"
+RUN python -c "from ltr.admin.environment import create_default_local_file; create_default_local_file()"
+RUN git submodule update
 
-RUN rm /home/vot_ws/pytracking/ltr/external/pytorch/prroi_pool/src/prroi_pooling_gpu.c
-RUN cp /home/vot_ws/pytracking/pytracking/external/prroi_pooling_gpu.c /home/vot_ws/pytracking/ltr/external/pytorch/prroi_pool/src/
+RUN rm /home/vot_ws/pytracking/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.c
+RUN cp /home/vot_ws/pytracking/pytracking/external/prroi_pooling_gpu.c /home/vot_ws/pytracking/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/

@@ -106,8 +106,8 @@ gdown https://drive.google.com/uc\?id\=1MAjrRJDCbL0DSjUKFyDkUuYS1-cYBNjk -O pytr
 # echo ""
 # echo ""
 # echo "****************** Setting up environment ******************"
-# python -c "from pytracking.evaluation.environment import create_default_local_file; create_default_local_file()"
-# python -c "from ltr.admin.environment import create_default_local_file; create_default_local_file()"
+python -c "from pytracking.evaluation.environment import create_default_local_file; create_default_local_file()"
+python -c "from ltr.admin.environment import create_default_local_file; create_default_local_file()"
 
 
 # echo ""
