@@ -489,7 +489,13 @@ class Tracker:
         import pytracking.evaluation.vot2020 as vot
 
         def _convert_anno_to_list(vot_anno):
-            vot_anno = [vot_anno[0], vot_anno[1], vot_anno[2], vot_anno[3]]
+            print(f"len annos are: {len(vot_anno)}")
+            print(f"pre convert anno: {vot_anno}")
+            if len(vot_anno) == 1:
+                vot_anno = [vot_anno[0][0][0], vot_anno[0][1][0], vot_anno[0][2][0], vot_anno[0][3][0]]
+            else:
+                vot_anno = [vot_anno[0], vot_anno[1], vot_anno[2], vot_anno[3]]
+            print(f"post_convert anno:{vot_anno}")
             return vot_anno
 
         def _convert_image_path(image_path):

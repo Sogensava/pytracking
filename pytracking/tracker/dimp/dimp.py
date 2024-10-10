@@ -42,6 +42,7 @@ class DiMP(BaseTracker):
 
         # Get target position and size
         state = info['init_bbox']
+        print(f"dimp script bbox:{state}")
         self.pos = torch.Tensor([state[1] + (state[3] - 1)/2, state[0] + (state[2] - 1)/2])
         self.target_sz = torch.Tensor([state[3], state[2]])
 
